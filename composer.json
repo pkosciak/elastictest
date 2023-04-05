@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4": {
+            "ElasticTest\\": "app"
+        }
+    },
+    "require": {
+        "elasticsearch/elasticsearch": "^7.10"
+    }
+}
