@@ -13,7 +13,8 @@ class Index extends Connection
      * @param $params
      * @return array|callable
      */
-    public function singleIndex($params){
+    public function singleIndex($params): array|callable
+    {
         return $this->client->index($params);
     }
 
@@ -21,7 +22,8 @@ class Index extends Connection
      * @param $params
      * @return array|callable
      */
-    public function bulkIndex($params){
+    public function bulkIndex($params): array|callable
+    {
         return $this->client->bulk($params);
     }
 
@@ -41,5 +43,14 @@ class Index extends Connection
     public function updateIndex($params): array
     {
         return $this->client->update($params);
+    }
+
+    /**
+     * @param $params
+     * @return array|callable
+     */
+    public function deleteIndex($params): array|callable
+    {
+        return $this->client->delete($params);
     }
 }

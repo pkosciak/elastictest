@@ -9,7 +9,10 @@ class Diagnostics extends Connection
         parent::__construct();
     }
 
-    public function getHealth()
+    /**
+     * @return array
+     */
+    public function getHealth(): array
     {
         return $this->client->cluster()->health();
     }
